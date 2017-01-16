@@ -1,6 +1,7 @@
 package com;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,5 +19,9 @@ public class Controler {
         System.out.println(e);
         service.save(e);
         return "lolthx";
+    }
+    @Bean
+    public EService service(){
+        return new EServiceImpl();
     }
 }
