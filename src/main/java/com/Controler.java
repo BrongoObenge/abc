@@ -48,10 +48,11 @@ public class Controler {
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
             String sql;
-            sql = "INSERT INTO username VALUES('"+e.getUsername()+"');";
+            sql = "INSERT INTO `table`(`username`) VALUES('"+e.getUsername()+"');";
             stmt.execute(sql);
 
         }catch (Exception f){
+
             f.printStackTrace();
         }finally{
             conn.close();
